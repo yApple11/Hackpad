@@ -5,6 +5,7 @@
     "bootloader": "rp2040",
     "diode_direction": "COL2ROW",
     "features": {
+        "encoder":true,
         "bootmagic": true,
         "extrakey": true,
         "mousekey": true,
@@ -12,6 +13,7 @@
     },
     "matrix_pins": {
         "direct": [
+            ["GP10"] //the rotary encoder button
             ["GP1", "GP3", "GP6"],
             ["GP2", "GP5", "GP7"]
         ]
@@ -34,5 +36,10 @@
                 {"matrix": [1, 2], "x": 2, "y": 1}
             ]
         }
+    }
+    "encoder":{
+        "rotary": [
+            {"pin_a": "GP9", "pin_b": "GP8", "resolution": 4}
+        ]
     }
 }
